@@ -1,101 +1,115 @@
-import Image from "next/image";
+import Card from "@/components/card/Card";
+import HeroSection from "@/components/heroSection/HeroSection";
 
-export default function Home() {
+import img from "@/public/card-img/imageWebsite.5c6ae62f.jpg"
+import img2 from "@/public/card-img/imageWebsite2.a102c7b5.jpg"
+import img3 from "@/public/card-img/imageWebsite3.b845fe78.jpg"
+
+import programing from "@/public/courses-img/programming_fundamentals.49cca4e9.jpg"
+import web2 from "@/public/courses-img/nextjs.3dff0f70.jpg"
+import earn from "@/public/courses-img/earn_as_your_learn.b8248a49.jpg"
+
+import Ai from "@/public/courses-img/AI.39397d24.jpg"
+import webMeta from "@/public/courses-img/metaverse.06eccb60.jpg"
+import cnc from "@/public/courses-img/cloudComputing.7260492c.jpg"
+import iot from "@/public/courses-img/iot.16f7b003.jpg"
+import gab from "@/public/courses-img/genomics.b87789f1.jpg"
+import npa from "@/public/courses-img/automation.a77dbbe8.jpg"
+
+import Slider from "@/components/slider/Slider";
+import CoursesCard from "@/components/coursesCard/CoursesCard";
+import Link from "next/link";
+
+export default function Home(){
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="w-screen">
+      <HeroSection/>
+      <div className=" xl:w-[1300px] lg:w-[90%] w-[95%] m-auto sm:mt-20 mt-10 border-b border-zinc-300 pb-10 flex flex-col justify-items-center items-center">
+        <h1 className="text-blue-900 text-center xl:text-[36px] sm:text-[32px] text-xl sm:leading-[2.5rem] leading-[1.75rem] text-main font-extrabold m-auto md:w-[95%]">
+          Certified Cloud Applied Generative AI Engineer (GenEng) 
+          and Solopreneur Developing Billion-Dollar Valued Developers and Solopreneurs
+        </h1>
+        <p className="sm:mt-10 mt-7 mb-8 xl:text-[1.25rem] sm:text-[1.2rem] text-[1rem] text-zinc-800 sm:tracking-wider tracking-normal text-justify">
+          The pace of technological change is accelerating,
+          big players like Microsoft, Amazon, Google, and OpenAI are winning by providing infrastructure,
+          large AI foundation models, frameworks, 3D Metaverse experiences, and massive distribution networks. 
+          Solopreneurs trained in this program will win by automating work typically outsourced to employees, 
+          by directly connecting to customers by eliminating the middleman, and by developing vertical metaverses, 
+          thus paving the way for the first billion-dollar valued solopreneur businesses. This program has the objective to train this new breed of billion-dollar solopreneurs.
+          These solopreneurs will adopt the ultra-lean business model and work independently and will not need to hire employees or other&nbsp;team&nbsp;members.
+        </p>
+      </div>
+      <div className="grid sm:grid-cols-3 grid-cols-1 gap-5 mt-10 m-auto sm:m-auto">
+        <Card src={img}/>
+        <Card src={img2}/>
+        <Card src={img3}/>
+        <div className=" grid sm:grid-cols-2 grid-cols-1 w-screen mt-10">
+        <Slider/>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+
+
+
+      <div className="xl:w-[1300px] lg:w-[90%] w-[95%] m-auto mt-20 mb-10">
+        <h1 className=" text-[#005080] lg:text-4xl sm:text-4xl text-2xl sm:text-left text-center font-extrabold mt-10 ">
+         Core Courses Sequence
+        </h1>
+        <div className="grid lg:grid-cols-4 sm:grid-cols-3 grid-cols-1 lg:gap-10 gap-5 mt-10">
+          <Link className="hover:scale-105 duration-200 transition-all" href="/compulsory/1">
+            <CoursesCard title="Programming Fundamentals" src={programing}/>
+          </Link>
+
+          <Link className="hover:scale-105 duration-200 transition-all" href="/compulsory/2">
+            <CoursesCard title="web2 Using NextJS" src={web2}/>
+          </Link>
+
+          <Link className="hover:scale-105 duration-200 transition-all" href="/compulsory/3">
+            <CoursesCard title="Earn as You Learn" src={earn}/>
+          </Link>
+
+        </div>
+
+      </div>
+
+
+
+      <div className="xl:w-[1300px] lg:w-[90%] w-[95%] m-auto mt-20 mb-10">
+        <h1 className=" text-[#005080] lg:text-4xl sm:text-4xl text-2xl sm:text-left text-center text-main font-extrabold mt-10 ">
+          Advanced Courses
+        </h1>
+        <div className="grid lg:grid-cols-4 sm:grid-cols-3 grid-cols-1 xl-lg:gap-10 gap-5 mt-10">
+          <Link className="hover:scale-105 duration-200 transition-all" href="/tracks/ai/4">
+            <CoursesCard title="Artificial Intelligence" src={Ai}/>
+          </Link>
+
+          <Link className="hover:scale-105 duration-200 transition-all" href="/tracks/ai/4">
+            <CoursesCard title="Web 3 and Metaverse" src={webMeta}/>
+          </Link>
+
+          <Link className="hover:scale-105 duration-200 transition-all" href="/tracks/ai/4">
+            <CoursesCard title="Cloud-Native Computing" src={cnc}/>
+          </Link>
+
+
+          <Link className="hover:scale-105 duration-200 transition-all" href="/tracks/ai/4">
+            <CoursesCard title="Ambient Computing and IoT" src={iot}/>
+          </Link>
+
+          <Link className="hover:scale-105 duration-200 transition-all" href="/tracks/ai/4">
+            <CoursesCard title="Genomics and Bioinformatics" src={gab}/>
+          </Link>
+
+          <Link className="hover:scale-105 duration-200 transition-all" href="/tracks/ai/4">
+            <CoursesCard title="Network Programmability and Automation" src={npa}/>
+          </Link>
+        </div>
+
+      </div>
+      
+       
+      
     </div>
-  );
+  
+  )
 }
+  
